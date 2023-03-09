@@ -3,7 +3,7 @@ name: Pipeline and Merge to Main
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   build-and-merge:
@@ -20,4 +20,4 @@ jobs:
         uses: my-repo/actions-merge-branch@v1
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
-          branch: main
+          branch: dev
