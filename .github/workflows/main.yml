@@ -3,7 +3,6 @@ name: Pipeline and Merge to Main
 on:
   push:
     branches:
-      - main
       - dev
 
 jobs:
@@ -17,7 +16,7 @@ jobs:
       - name: Run pipeline
         run: ./run-pipeline.sh
 
-      - name: dev to main
+      - name: Merge to main
         uses: peaceiris/actions-merge-branch@v1
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
