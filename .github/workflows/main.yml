@@ -18,6 +18,6 @@ jobs:
 
       - name: Merge to main
         uses: peaceiris/actions-merge-branch@v1
-        with:
+        env:
           github_token: ${{ secrets.GIT_TOKEN }}
           branch: main
